@@ -5,7 +5,7 @@ document.querySelectorAll('.mt2').forEach(element => {
     //Selects the button inside each div
     let button = element.querySelector('button');
     //checks if the buttons was already clicked
-    if (button.getAttribute('aria-label') !== "Pending, click to withdraw invitation sent to Fatima Zahrae Bahadou") {
+    if (!button.getAttribute('aria-label').includes("Pending, click to withdraw invitation sent")) {
         //clicks the button
         button.click();
         //logs the buttons that were clicked
@@ -13,6 +13,15 @@ document.querySelectorAll('.mt2').forEach(element => {
         //selects the div that contains the connections
         const divElement = document.getElementById('ember/*replace with the number you copied*/');
         //scrolls to the bottom of the div
+        divElement.scrollTop = divElement.scrollHeight;
+    }
+});
+document.querySelectorAll('.mt2').forEach(element => {
+    let button = element.querySelector('button');
+    if (!button.getAttribute('aria-label').includes("Pending, click to withdraw invitation sent")) {
+        button.click();
+        console.log(element.querySelector('button'));
+        const divElement = document.getElementById('ember1762');
         divElement.scrollTop = divElement.scrollHeight;
     }
 });

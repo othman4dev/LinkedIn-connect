@@ -33,13 +33,13 @@ Follow the steps below to use the script:
 
     ```javascript
     document.querySelectorAll('.mt2').forEach(element => {
-        let button = element.querySelector('button');
-        if (button.getAttribute('aria-label') !== "Pending, click to withdraw invitation sent to Fatima Zahrae Bahadou") {
-            button.click();
-            console.log(element.querySelector('button'));
-            const divElement = document.getElementById('ember/*replace with the number you copied*/');
-            divElement.scrollTop = divElement.scrollHeight;
-        }
+    let button = element.querySelector('button');
+    if (!button.getAttribute('aria-label').includes("Pending, click to withdraw invitation sent")) {
+        button.click();
+        console.log(element.querySelector('button'));
+        const divElement = document.getElementById('ember1762');
+        divElement.scrollTop = divElement.scrollHeight;
+    }
     });
     ```
     Replace '/*replace with the number you copied*/' with the number you copied from the id attribute in step 4.
