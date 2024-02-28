@@ -16,12 +16,3 @@ document.querySelectorAll('.mt2').forEach(element => {
         divElement.scrollTop = divElement.scrollHeight;
     }
 });
-document.querySelectorAll('.mt2').forEach(element => {
-    let button = element.querySelector('button');
-    if (!button.getAttribute('aria-label').includes("Pending, click to withdraw invitation sent")) {
-        button.click();
-        console.log(element.querySelector('button'));
-        const divElement = document.getElementById('ember1762');
-        divElement.scrollTop = divElement.scrollHeight;
-    }
-});
